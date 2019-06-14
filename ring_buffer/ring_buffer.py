@@ -21,6 +21,16 @@ class RingBuffer:
       self.current = 0
   
   def get(self):
-    pass 
-
+    # setting the empty buffer
+    buffer = []
+    # if storage in not none
+    if self.storage != None:
+      # loop thru
+      for i in self.storage:
+        if i != None:
+          # then append
+          buffer.append(i)
+    # print and return everythin gn the buffer /  array
+    print(buffer)      
+    return buffer
     
