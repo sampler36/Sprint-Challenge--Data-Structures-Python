@@ -13,7 +13,7 @@ class RingBuffer:
     # maybe init it to the new elem
     self.storage[self.current] = item
     # check if current is less than capacity -1
-    if self.current < self.capacity -1:
+    if self.current < self.capacity -1:   # O(n)
       # if true then increment the current value by 1
       self.current += 1
       # else just reset the index to 0
@@ -24,9 +24,9 @@ class RingBuffer:
     # setting the empty buffer
     buffer = []
     # if storage in not none
-    if self.storage != None:
+    if self.storage != None:   # O(n)
       # loop thru
-      for i in self.storage:
+      for i in self.storage:   
         if i != None:
           # then append
           buffer.append(i)
