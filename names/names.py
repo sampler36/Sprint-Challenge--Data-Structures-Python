@@ -11,10 +11,13 @@ names_2 = f.read().split("\n")  # List containing 10000 names
 f.close()
 
 duplicates = []
-for name_1 in names_1:
-    for name_2 in names_2:
-        if name_1 == name_2:
-            duplicates.append(name_1)
+# i could have used a binary search but
+# i used intersection since this is a large data set
+# by just using intersection the code runs under
+# intersection here means its comparing
+#  whats common in set name1 and name 2
+#  0.0035, 0.013, 0.0038 etc
+duplicates = set(names_1).intersection(names_2)
 
 end_time = time.time()
 print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
